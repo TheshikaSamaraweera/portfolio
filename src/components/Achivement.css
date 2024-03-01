@@ -1,0 +1,137 @@
+body {
+	background-color: #2E3537;
+	font-family: 'Arial', sans-serif;
+}
+
+:root {
+	--cards: 2;
+	--cardHeight: 30vh;
+	--cardTopPadding: 1.5em;
+	--cardMargin: 4vw;
+}
+
+
+
+.Achi_container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 120vh;
+	 /* Take up the full height of the viewport */
+}
+
+#Acards {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--cards), var(--cardHeight));
+    gap: var(--cardMargin);
+    padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+    margin-bottom: var(--cardMargin);
+}
+
+#Acard1 {
+	--index: 1;
+}
+#Acard2 {
+	--index: 2;
+}
+#Acard3 {
+	--index: 3;
+}
+#Acard4 {
+	--index: 4;
+}
+
+.Acard {
+	position: sticky;
+	top: 40vh; 
+    transform: translateY(-60%); 
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+	width:600px;
+	height: auto !important;
+	
+}
+
+#Acard1 .Acard-body {
+	background-color: rgba(82, 178, 207, 0.2);
+
+	
+}
+#Acard2 .Acard-body {
+    background-color: rgba(229, 163, 111, 0.7); /* RGBA color with 50% transparency */
+}
+
+#Acard3 .Acard-body {
+	background-color: #9CADCE;
+}
+#Acard4 .Acard-body {
+	background-color: #D4AFB9;
+}
+
+.Acard-body {
+	box-sizing: border-box;
+	padding: 30px;
+	border-radius: 50px;
+	box-shadow: 0 0 50px 0 rgba(0,0,0,0.5);
+	height: var(--cardHeight);
+	display: flex;
+	justify-content: center;
+	
+	transition: all 0.5s;
+	display: flex; /* Use flexbox to align children */
+    
+}
+
+h2 {
+	font-size: 2.5em;
+	
+}
+h1 {
+	font-size: 3.5rem;
+	text-align: center;
+	padding: 2rem;
+	
+
+}
+.Aimg {
+    height: 250px;
+    width: 300px;
+    float: left;
+	border-radius: 20px;
+
+	margin: 0 -60px 0 0; /* Align the element to the left */
+}
+.Atopic{
+	text-align: left;
+	font-size: 20px;
+	margin-right: 10px;
+	margin-left: -50px;
+}
+.Aimg1 {
+    height: 250px;
+    width: 300px;
+    float: left;
+	border-radius: 20px;
+
+	margin: 0 -10px 0 0; /* Align the element to the left */
+}
+.Atopic1{
+	text-align: left;
+	font-size: 20px;
+	margin-right: 10px;
+	margin-left: -10px;
+}
+
+.Achivement{
+
+    position: relative;
+    background-image: url('../assets/img/footer-bg.png');
+    display: flex;
+    background-size: cover;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    flex-direction: column;
+
+}
