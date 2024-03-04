@@ -10,7 +10,7 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
-  const projects = [
+  const projects1 = [
     {
       title: "Motel Food Manager",
       description: "MERN stack web application ",
@@ -32,6 +32,27 @@ export const Projects = () => {
       description: "NestJs",
       imgUrl: projImg4,
     },
+   
+  ];
+
+  const projects2 = [
+    {
+      title: "Motel Food Managerrrrrr",
+      description: "MERN stack web application ",
+      imgUrl: projImg1,
+      githubUrl: "https://github.com/your-username/motel-food-manager"
+    },
+    {
+      title: "pharmacy Appaaaa",
+      description: "ReactJs,NodeJs,JWT authentication",
+      imgUrl: projImg2,
+    },
+    {
+      title: "Coffee Wbsite",
+      description: "Html,Javascript,CSS",
+      imgUrl: projImg3,
+    },
+   
    
   ];
 
@@ -61,7 +82,21 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          projects1.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                      <Row>
+                        {
+                          projects2.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}

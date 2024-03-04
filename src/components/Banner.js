@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "computer engineering", "Undergraduate", "Fast Learner" ];
   const period = 2000;
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Theshika,`} <span className="txt-rotate" dataPeriod="10000" data-rotate='[ "A computer", engineering" ,"undergraduate", ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Theshika,`} <br></br><span className="txt-rotate" dataPeriod="10000" data-rotate='[ "A computer engineering" ,"undergraduate", "Fast Learner" ]'><span className="wrap">{text}</span></span></h1>
                   <p>I am a Computer Engineering Undergraduate at the Faculty of Engineering University of Ruhuna.
                     I'm familiar with , <br/> <ul>
                         <li>Fullstack Web Development</li>
@@ -80,7 +80,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                   <img src={require('../assets/img/logo.png')} alt="logo" />
+                   <img src={require('../assets/img/my.png')} alt="logo" />
                 </div>}
             </TrackVisibility>
           </Col>
