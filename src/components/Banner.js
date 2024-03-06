@@ -80,7 +80,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                   <img src={require('../assets/img/my.png')} alt="logo" />
+                   <img src={require('../assets/img/remove.png')} alt="logo" />
                 </div>}
             </TrackVisibility>
           </Col>
