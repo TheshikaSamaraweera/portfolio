@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
@@ -47,6 +47,15 @@ export const Banner = () => {
     }
   }
 
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '../assets/pdf/mycv.pdf'; 
+    link.download = 'mycv.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -72,7 +81,7 @@ export const Banner = () => {
                       I am an innovative person with quick learning abilities. 
                       And also I am a good time Manager, hardworking, self motivated, 
                       open minded and positive attitude to to challenge and opportunities. </p>
-                  
+                  <Button variant="primary" onClick={downloadCV}>Download CV</Button> {/* Add a Download CV button */}
               </div>}
             </TrackVisibility>
           </Col>
